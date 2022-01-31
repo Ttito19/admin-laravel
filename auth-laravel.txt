@@ -1,0 +1,23 @@
+----------------INSTALAR JWT AUTH --------------
+
+https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
+
+composer require tymon/jwt-auth
+
+Una vez instalado debemos ir a config/app y agregar "Tymon\JWTAuth\Providers\LaravelServiceProvider::class" line:177
+
+---------------PUBLICAR EL PAQUETE --------------
+
+Seleccionamos el proveedor= Provider: Tymon\JWTAuth\Providers\LaravelServiceProvider  ->  10
+
+-------------GENERAR UNA CLAVE SECRETA-------
+php artisan jwt:secret
+->podemos apreciar que se genero una llave secreta en el terminal y el archivo .env
+
+----------------CONFIGURAR AUTH.PHP---------------
+
+----------------CREAR CONTROLADOR AUTH -----------
+php artisan make:controller AuthController 
+y le vamos agregar el código de la documentación
+
+

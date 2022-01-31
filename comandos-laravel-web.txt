@@ -1,0 +1,8 @@
+-------------CREAR MI CONTROLADOR PARA LISTAR, CREAR, ACTUALIZAR Y ELIMINAR-----------
+//por convicción en  el nombre del controlador la primera letra en mayúscula y Controller también 
+// no crear la logica de un CRUD
+php artisan make:controller ProductController 
+// SI crear la logica de un CRUD
+php artisan make:controller ProductController --resource
+
+php artisan config:cache

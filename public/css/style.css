@@ -1,0 +1,22 @@
+.card{
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+.text-h3{
+    color: #ffffff;
+}
+
+.card-header{
+    padding: 15px;
+    border-radius: 18px !important;
+    background-color: #ff7d42d4;
+}
+
+/* #table-categorie_wrapper{
+    border-radius: 31px;
+    background: #ffffff;
+    padding: 13px;
+} */
+.table-responsive{
+    padding: 20px
+}

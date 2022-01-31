@@ -1,0 +1,11 @@
+instalaci�n de laravel 
+composer global require laravel/installer
+laravel new dashboard-tacticalstore --jet
+-0 
+-no 
+
+ npm run dev
+
+ en caso haya problemas ejecutar 
+ npm install --legacy-peer-deps
+ y luego nuevamente npm run dev

@@ -1,0 +1,52 @@
+
+------PARA NO TENER ERRORERS CON LAS MIGRACIONES AGREGAR -------
+app/providers/AppServiceProvider.php
+"use Illuminate\Support\Facades\Schema;"
+y en la funcion boot() -> Schema::defaultStringLength(191);
+
+------PARA EVITAR PORBLEMAS DE LOS CORS-------
+https://github.com/fruitcake/laravel-cors
+
+composer require fruitcake/laravel-cors
+
+tenermos que verificar si se instalo
+-lo podemos apreciar en app/Http/Kernel.php -> "\Fruitcake\Cors\HandleCors::class"
+
+------------PUBLICAR EL PAQUETE EL CORS----------
+php artisan vendor:publish
+
+y elegimos "CORS"->10.
+verificamos si está configurado en config/cors.php
+
+
+----------------------------------------------------COMANDOS---------------------------------------------------
+----------EJECUTAR TODO--------
+php artisan migrate
+
+-----------CREAR UN MODELO--------
+Nota: Siempre los modelos se crean con letra mayúscula al inicio y en singular
+php artisan make:model Product
+->lo podemos encontrar en app/models/
+
+----------CREAR MIGRACIÓN DE LA TABLA PRODUCTS------
+php artisan make:migration create_product_table
+->lo podemos encontrar en database/migrations/
+un vez asignado campos en el migration, tenemos que crear en el modelo una variable
+$fillable de tipo protected e igualarlo en un array los campos creados.
+
+php artisan migrate
+
+-------------CREAR MI CONTROLADOR PARA LISTAR, CREAR, ACTUALIZAR Y ELIMINAR-----------
+//por convicción en  el nombre del controlador la primera letra en mayúscula y Controller también
+php artisan make:controller ProductsController --resource
+->lo podemos encontrar en app/Http/Controllers/
+
+
+---------LIMPIAR EL CACHÉ--------
+php artisan config:cache
+
+
+////////////uno a muchos/////////////
+
+php artisan make:controller RelacionController
+php artisan make:resource CategorieResource
