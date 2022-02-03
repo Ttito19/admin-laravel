@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'Tacticalstore-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3C3D32341FE74E7CAF058112A91CEDA7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8BC1928C20F442B394BBAC9AEE419E32 }}
           package: .
