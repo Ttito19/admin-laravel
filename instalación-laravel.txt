@@ -14,6 +14,11 @@ laravel new dashboard-tacticalstore --jet
 
 
  //////////////instalacion laravel in azure//////////////////
+cd site/wwwroot
+composer -v
+
+cp .env.example .env
+php artisan key:generate
 
 php composer install
 
