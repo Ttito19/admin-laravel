@@ -29,7 +29,7 @@ $('#table-categorie').DataTable( {
             },
     processing: false,
     serverSide: true,
-    ajax:"/listaCategorias",
+    ajax:"./listaCategorias",
     // retrieve: true,
     // paging: false,
     // aaSorting:[[0,"desc"]],

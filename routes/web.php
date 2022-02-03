@@ -58,3 +58,13 @@ Route::get('/listaCategorias', [CategorieController::class, 'fechtcategorias']);
 Route::get('/edit-categorie/{id}', [CategorieController::class, 'edit']);
 Route::post('/update-categorie/{id}', [CategorieController::class, 'update']);
 Route::delete('/delete-categorie/{id}', [CategorieController::class, 'destroy']);
+
+// Clientes
+Route::resource('categories','App\Http\Controllers\CategorieController');
+
+Route::post('/create-categories', [CategorieController::class, 'store']);
+Route::get('/listaClients', [CategorieController::class, 'fechtcategorias']);
+Route::get('/edit-clients/{id}', [CategorieController::class, 'edit']);
+Route::post('/update-clients/{id}', [CategorieController::class, 'update']);
+Route::delete('/delete-clients/{id}', [CategorieController::class, 'destroy']);
+

@@ -9,3 +9,39 @@ laravel new dashboard-tacticalstore --jet
  en caso haya problemas ejecutar 
  npm install --legacy-peer-deps
  y luego nuevamente npm run dev
+
+
+
+
+ //////////////instalacion laravel in azure//////////////////
+
+php composer install
+
+https://getcomposer.org/download/
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+
+php artisan cache:clear
+php artisan config:clear
+php artisan config:cache
+
+
+///// conection para azure//////
+DB_CONNECTION=sqlsrv
+DB_HOST=tcp:server-tactical.database.windows.net
+DB_PORT=1433
+DB_DATABASE=bd_sistema_tacticalstore
+DB_USERNAME=adminTactical
+DB_PASSWORD=TacticalStore2022
+
+///// conection para localhost//////
+DB_CONNECTION=sqlsrv
+DB_HOST=DESKTOP-IHIROV7
+DB_PORT=
+DB_DATABASE=bd_sistema_tacticalstore
+DB_USERNAME=
+DB_PASSWORD=
+

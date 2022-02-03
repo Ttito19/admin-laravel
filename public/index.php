@@ -1,5 +1,11 @@
 <?php
-
+if(!empty($_SERVER['REQUEST_URI'])){
+	if(strpos($_SERVER['REQUEST_URI'],'/install') !== false){
+		if(!file_exists(__DIR__.'/../.env')){
+			copy(__DIR__.'/../.env.example',__DIR__.'/../.env');
+		}
+	}
+}
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 

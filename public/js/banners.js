@@ -29,7 +29,7 @@ $('#table-banners').DataTable( {
             },
     processing: false,
     serverSide: true,
-    ajax:"/listaBanners",
+    ajax:"./listaBanners",
     // retrieve: true,
     // paging: false,
     // aaSorting:[[0,"desc"]],

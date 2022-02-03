@@ -29,7 +29,7 @@ $('#table-brands').DataTable( {
             },
     processing: false,
     serverSide: true,
-    ajax:"/listaBrands",
+    ajax:"./listaBrands",
     // retrieve: true,
     // paging: false,
     // aaSorting:[[0,"desc"]],
